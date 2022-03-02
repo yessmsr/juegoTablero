@@ -1,0 +1,18 @@
+public class juego {
+
+    public static void main(String[] args) {
+        int casilla=casillas;
+        while(Ficha1<=casilla && Ficha2<=casilla){
+            int avanza=avanzar();
+            Ficha1=avanza;
+            Ficha2 =avanza;
+            //Juega Ficha1
+            if(Ficha1>=casilla){
+                System.out.println("Ha ganado la ficha verde");
+            }
+            if(Ficha2>=casilla){
+                System.out.println("Ha ganado la ficha azul");
+            }
+        }
+        }
+}
