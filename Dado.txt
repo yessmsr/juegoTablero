@@ -1,0 +1,11 @@
+public class Dado{
+    private int dado;
+
+    public Dado(){
+        dado= (int)(Math.random()*6+1);
+    }
+    public int lanzar(){
+        return dado;
+    }
+    
+}
