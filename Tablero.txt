@@ -1,28 +1,34 @@
 public class tablero{
     private int casillas;
-    private String Ficha1;
-    private String Ficha2;
+    private String[] fichas;
+
+    Ficha posicion= new Ficha(null);
+
 
     public tablero(){
-        casillas=20;
-        Ficha1=Ficha("Verde");
-        Ficha2=Ficha("Azul");
+        initfichas();
+        casillas=10;
     }
-  /*  public int juego(){
-        public static void main(String[] args) {
-            int casilla=casillas;
-            while(Ficha1<=casilla && Ficha2<=casilla){
-                int avanza=avanzar();
-                Ficha1=avanza;
-                Ficha2 =avanza;
-                //Juega Ficha1
-                if(Ficha1>=casilla){
-                    System.out.println("Ha ganado la ficha verde");
-                }
-                if(Ficha2>=casilla){
-                    System.out.println("Ha ganado la ficha azul");
-                }
+
+    private void initfichas(){
+        fichas= new String[2];
+        fichas[0]="Verde";
+        fichas[1]="Azul";
+    }
+    public void juego(){
+        int i=0;
+        while(i<fichas.length){
+            int avanza=posicion.avanzar();
+            if (avanza>=casillas){
+                i+=1;
+                System.out.println("Ha ganado la ficha: "+fichas[i]);
             }
+            else{
+                i+=1;
+                System.out.println("Ha ganado la ficha: "+fichas[i]);
             }
-    }*/
+            
+        }
+
+    }
 }
