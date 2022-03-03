@@ -9,9 +9,10 @@ public class Ficha {
         posicion=0;
         
     }
-    public void avanzar(){
+    public int avanzar(){
         int pasos=dado.lanzar();
         posicion+=pasos;
-        System.out.println(posicion);    
+         
+        return posicion;
     }
     }
