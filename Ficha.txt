@@ -1,16 +1,17 @@
 public class Ficha {
-    private String color;
-    private int posicion;
-    private int dado;
+    public String color;
+    public int posicion;
+    
+    Dado dado = new Dado();
 
-    public Ficha(){
-        color=" ";
+    public Ficha(String colorFicha){
+        color=colorFicha;
         posicion=0;
-        dado=(int)(Math.random()*6+1);
+        
     }
-    public int avanzar(){
-        int pasos=dado;
+    public void avanzar(){
+        int pasos=dado.lanzar();
         posicion+=pasos;
-        return posicion;      
+        System.out.println(posicion);    
     }
     }
